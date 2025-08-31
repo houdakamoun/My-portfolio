@@ -1,0 +1,16 @@
+.navbar {
+  background: #0077b6;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end; /* ✅ met les liens à droite */
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px; /* espace entre les liens */
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline; /* petit effet au survol */
+}

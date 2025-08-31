@@ -1,0 +1,123 @@
+<!-- PROJET MIS EN AVANT (PFE) -->
+<section *ngIf="featuredProject" class="featured">
+  <div class="featured-card">
+    <img
+      *ngIf="featuredProject?.image"
+      [src]="featuredProject?.image"
+      [alt]="featuredProject?.title"
+    />
+    <div class="featured-body">
+      <h2>{{ featuredProject?.title }}</h2>
+      <p class="subtitle" *ngIf="featuredProject?.subtitle">
+        {{ featuredProject?.subtitle }}
+      </p>
+      <p class="desc">{{ featuredProject?.description }}</p>
+
+      <ul class="highlights" *ngIf="featuredProject?.highlights?.length">
+        <li *ngFor="let h of featuredProject!.highlights">{{ h }}</li>
+      </ul>
+
+      <div class="chips">
+        <span class="chip" *ngFor="let t of featuredProject!.tech">{{
+          t
+        }}</span>
+      </div>
+
+      <div class="actions">
+        <a
+          *ngIf="featuredProject?.demoUrl"
+          [href]="featuredProject?.demoUrl"
+          target="_blank"
+          rel="noopener"
+          >Démo</a
+        >
+        <a
+          *ngIf="featuredProject?.githubUrl"
+          [href]="featuredProject?.githubUrl"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >
+        <button (click)="openDetails(featuredProject!)">Détails</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTRES -->
+<section class="filters">
+  <button
+    *ngFor="let cat of categories"
+    (click)="selectedCategory = cat"
+    [class.active]="selectedCategory === cat"
+  >
+    {{ cat | titlecase }}
+  </button>
+</section>
+
+<!-- AUTRES PROJETS -->
+<section class="grid">
+  <article class="card" *ngFor="let p of filteredProjects; trackBy: trackById">
+    <img *ngIf="p.image" [src]="p.image" [alt]="p.title" />
+    <div class="card-body">
+      <h3>{{ p.title }}</h3>
+      <p class="small">{{ p.description }}</p>
+      <div class="chips">
+        <span class="chip" *ngFor="let t of p.tech">{{ t }}</span>
+      </div>
+      <div class="actions">
+        <a *ngIf="p.demoUrl" [href]="p.demoUrl" target="_blank" rel="noopener"
+          >Démo</a
+        >
+        <a
+          *ngIf="p.githubUrl"
+          [href]="p.githubUrl"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >
+        <button (click)="openDetails(p)">Détails</button>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- MODALE DÉTAILS -->
+<div
+  class="modal-backdrop"
+  *ngIf="selectedProject"
+  (click)="closeDetails()"
+></div>
+<div class="modal" *ngIf="selectedProject">
+  <button class="close" (click)="closeDetails()">×</button>
+  <h3>{{ selectedProject?.title }}</h3>
+  <p class="subtitle" *ngIf="selectedProject?.subtitle">
+    {{ selectedProject?.subtitle }}
+  </p>
+  <p>{{ selectedProject?.description }}</p>
+
+  <ul class="highlights" *ngIf="selectedProject?.highlights?.length">
+    <li *ngFor="let h of selectedProject!.highlights">{{ h }}</li>
+  </ul>
+
+  <div class="chips">
+    <span class="chip" *ngFor="let t of selectedProject!.tech">{{ t }}</span>
+  </div>
+
+  <div class="actions modal-actions">
+    <a
+      *ngIf="selectedProject?.demoUrl"
+      [href]="selectedProject?.demoUrl"
+      target="_blank"
+      rel="noopener"
+      >Démo</a
+    >
+    <a
+      *ngIf="selectedProject?.githubUrl"
+      [href]="selectedProject?.githubUrl"
+      target="_blank"
+      rel="noopener"
+      >GitHub</a
+    >
+  </div>
+</div>

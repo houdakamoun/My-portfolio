@@ -1,0 +1,66 @@
+/* Footer Styles */
+.footer {
+  background-color: #0077b6; /* black background */
+  color: #fff; /* white text */
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-contact,
+.footer-nav {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-contact h2,
+.footer-nav h2 {
+  color: white; /* blue headings */
+  margin-bottom: 15px;
+}
+
+.footer-contact p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.footer-contact a {
+  color: white; /* blue links */
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Navigation */
+.footer-nav a {
+  display: block;
+  margin: 6px 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-nav a:hover {
+  color: white;
+}
+
+/* Copyright */
+.footer p.copyright {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+}

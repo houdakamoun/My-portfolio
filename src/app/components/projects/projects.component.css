@@ -1,0 +1,215 @@
+/* =======================
+   Featured Card Layout
+   ======================= */
+.featured-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 20px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+}
+
+.featured-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-body {
+  padding: 24px;
+}
+.featured-body h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #111827;
+}
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+.desc {
+  color: #374151;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* =======================
+   Filters
+   ======================= */
+.filters {
+  margin: 28px 0 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.filters button {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: #374151;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.filters button:hover {
+  background-color: #f3f4f6;
+}
+.filters button.active {
+  background-color: #0d6efd;
+  color: #ffffff;
+  border-color: #0d6efd;
+}
+
+/* =======================
+   Grid Cards
+   ======================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-body h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #111827;
+}
+.small {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =======================
+   Chips
+   ======================= */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.chip {
+  background-color: #eef2ff;
+  color: #1e40af;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* =======================
+   Actions
+   ======================= */
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.actions a,
+.actions button {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: #374151;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.actions a:hover,
+.actions button:hover {
+  background-color: #f3f4f6;
+}
+
+/* =======================
+   Featured section spacing
+   ======================= */
+.featured {
+  margin-bottom: 28px;
+}
+
+/* =======================
+   Modal
+   ======================= */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 40;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(720px, 92vw);
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #374151;
+  transition: color 0.2s ease;
+}
+.modal .close:hover {
+  color: #111827;
+}
+.modal-actions a {
+  border-color: #0d6efd;
+}
+
+/* =======================
+   Responsive
+   ======================= */
+@media (max-width: 900px) {
+  .featured-card {
+    grid-template-columns: 1fr;
+  }
+}

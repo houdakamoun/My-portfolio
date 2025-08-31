@@ -1,0 +1,174 @@
+/* ===== General Section Styling ===== */
+.About {
+  background-color: #f5f7fa;
+  padding: 5rem 2rem;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: #222;
+}
+
+/* ===== Main Title ===== */
+.About h1 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: #111;
+  position: relative;
+}
+
+.About h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #0077b6;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== Flex Container for Cards ===== */
+.About .cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran */
+  justify-content: center;
+  gap: 20px; /* Espace entre les cartes */
+}
+
+/* ===== Individual Card Styling ===== */
+.Education-text,
+.Training-text,
+.skill-text,
+.lang-text {
+  flex: 1 1 300px; /* Largeur minimale 300px, flexible pour grand écran */
+  max-width: 350px; /* Largeur maximale */
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+/* ===== Section Titles ===== */
+.Education-text h2,
+.Training-text h2,
+.skill-text h2,
+.lang-text h2 {
+  font-size: 1.8rem;
+  color: #0077b6;
+  margin-bottom: 2rem;
+  border-left: 4px solid #0077b6;
+  padding-left: 12px;
+}
+
+/* ===== Timeline Style for Education & Training ===== */
+.edu-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 2rem;
+  border-left: 2px solid #0077b6;
+}
+
+.edu-item:last-child {
+  margin-bottom: 0;
+}
+
+.edu-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background-color: #0077b6;
+  border-radius: 50%;
+}
+
+/* ===== Skill Items ===== */
+.skill-item {
+  margin-bottom: 2rem;
+}
+
+.skill-item:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Sub Titles ===== */
+.Education-text h3,
+.skill-text h3,
+.edu-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  color: #222;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.Education-text h3:hover,
+.skill-text h3:hover,
+.edu-item h3:hover {
+  color: #0077b6;
+}
+
+/* ===== Paragraphs ===== */
+.Education-text p,
+.skill-text p,
+.edu-item p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+  background: #f0f4f8;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: #333;
+}
+
+/* ===== Highlighted Background for Skills ===== */
+.devskill,
+.CMSskill,
+.mulskill {
+  background: #f0f4f8;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: #333;
+}
+
+/* ===== Languages Card ===== */
+.lang-item p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.lang-item p strong {
+  color: #222;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .Education-text,
+  .Training-text,
+  .skill-text,
+  .lang-text {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .About {
+    padding: 3rem 1rem;
+  }
+
+  .Education-text,
+  .Training-text,
+  .skill-text,
+  .lang-text {
+    flex: 1 1 100%;
+  }
+
+  .edu-item,
+  .skill-item,
+  .lang-item {
+    padding-left: 20px;
+  }
+}
