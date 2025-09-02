@@ -2,15 +2,20 @@
   background: #0077b6;
   padding: 15px;
   display: flex;
-  justify-content: flex-end; /* ✅ met les liens à droite */
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .navbar a {
   color: white;
-  margin-left: 20px; /* espace entre les liens */
+  margin-left: 20px;
   text-decoration: none;
 }
 
 .navbar a:hover {
-  text-decoration: underline; /* petit effet au survol */
+  text-decoration: underline;
 }

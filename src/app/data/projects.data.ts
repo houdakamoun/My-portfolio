@@ -42,4 +42,26 @@ export const PROJECTS: Project[] = [
     year: 2025,
     category: 'web',
   },
+  {
+    id: 'Soccer',
+    title: 'Soccer',
+    subtitle: 'Design & Development of a Soccer Management Platform',
+    description:
+      'A responsive web application for managing soccer matches, teams, and player data, featuring authentication, user roles, and an intuitive interface.',
+
+    tech: ['Angular', 'Node.js', 'Express', 'MONGODB'],
+    image: 'assets/img/soccer.jpg',
+    demoUrl: 'https://ton-domaine-ou-demo.netlify.app',
+    githubUrl: 'https://github.com/houdakamoun/soccer',
+    year: 2025,
+    category: 'web',
+    featured: false,
+    highlights: [
+      'JWT authentication ',
+      'CRUD for classes & courses',
+      'Assignments and filtered search',
+      'Secure REST API + validations',
+      'CI/CD (automatic deployment)',
+    ],
+  },
 ];

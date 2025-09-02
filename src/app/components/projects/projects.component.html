@@ -18,9 +18,9 @@
       </ul>
 
       <div class="chips">
-        <span class="chip" *ngFor="let t of featuredProject!.tech">{{
-          t
-        }}</span>
+        <span class="chip" *ngFor="let t of featuredProject!.tech">
+          {{ t }}
+        </span>
       </div>
 
       <div class="actions">
@@ -56,7 +56,6 @@
 </section>
 
 <!-- AUTRES PROJETS -->
-
 <section class="grid">
   <article class="card" *ngFor="let p of filteredProjects; trackBy: trackById">
     <img *ngIf="p.image" [src]="p.image" [alt]="p.title" />
