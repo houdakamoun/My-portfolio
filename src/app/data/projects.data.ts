@@ -7,7 +7,15 @@ export const PROJECTS: Project[] = [
     subtitle: 'Design and development of a private school management platform',
     description:
       'Web application for managing classes, courses, and assignments, with authentication and user roles.',
-    tech: ['Angular', 'Node.js', 'Express', 'MONGODB'],
+    tech: [
+      'TypeScript',
+      'HTML',
+      'CSS',
+      'Angular',
+      'Node.js',
+      'Express',
+      'MONGODB',
+    ],
     image: 'assets/img/pfe-cover.jpg',
     demoUrl: 'https://ton-domaine-ou-demo.netlify.app',
     githubUrl: 'https://github.com/houdakamoun/Project_PFE',
@@ -49,9 +57,17 @@ export const PROJECTS: Project[] = [
     description:
       'A responsive web application for managing soccer matches, teams, and player data, featuring authentication, user roles, and an intuitive interface.',
 
-    tech: ['Angular', 'Node.js', 'Express', 'MONGODB'],
+    tech: [
+      'TypeScript',
+      'HTML',
+      'CSS',
+      'Angular',
+      'Node.js',
+      'Express',
+      'MONGODB',
+    ],
     image: 'assets/img/soccer.jpg',
-    demoUrl: 'https://ton-domaine-ou-demo.netlify.app',
+
     githubUrl: 'https://github.com/houdakamoun/soccer',
     year: 2025,
     category: 'web',
