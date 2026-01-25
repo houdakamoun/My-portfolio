@@ -80,4 +80,30 @@ export const PROJECTS: Project[] = [
       'CI/CD (automatic deployment)',
     ],
   },
+  {
+    id: 'HHFitness',
+    title: 'HH Fitness',
+    subtitle: 'Design & Development of an E-commerce Platform',
+    description:
+      'A complete e-commerce web application for selling fitness products, including clothing and nutritional items. The platform supports user authentication, shopping cart management, order processing, and a simulated credit card payment interface.',
+
+    tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+
+    image: 'assets/img/hhfitness.jpg',
+
+    githubUrl: 'https://github.com/houdakamoun/Ecommerce',
+
+    year: 2026,
+    category: 'web',
+    featured: false,
+
+    highlights: [
+      'User registration & login system',
+      'Session-based shopping cart',
+      'Product management with database',
+      'Order & command handling',
+      'Simulated credit card payment UI',
+      'Responsive and modern design',
+    ],
+  },
 ];

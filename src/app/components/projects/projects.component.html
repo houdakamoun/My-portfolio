@@ -121,3 +121,41 @@
     >
   </div>
 </div>
+<div
+  class="modal-backdrop"
+  *ngIf="selectedProject"
+  (click)="closeDetails()"
+></div>
+<div class="modal" *ngIf="selectedProject">
+  <button class="close" (click)="closeDetails()">×</button>
+  <h3>{{ selectedProject?.title }}</h3>
+  <p class="subtitle" *ngIf="selectedProject?.subtitle">
+    {{ selectedProject?.subtitle }}
+  </p>
+  <p>{{ selectedProject?.description }}</p>
+
+  <ul class="highlights" *ngIf="selectedProject?.highlights?.length">
+    <li *ngFor="let h of selectedProject!.highlights">{{ h }}</li>
+  </ul>
+
+  <div class="chips">
+    <span class="chip" *ngFor="let t of selectedProject!.tech">{{ t }}</span>
+  </div>
+
+  <div class="actions modal-actions">
+    <a
+      *ngIf="selectedProject?.demoUrl"
+      [href]="selectedProject?.demoUrl"
+      target="_blank"
+      rel="noopener"
+      >Démo</a
+    >
+    <a
+      *ngIf="selectedProject?.githubUrl"
+      [href]="selectedProject?.githubUrl"
+      target="_blank"
+      rel="noopener"
+      >GitHub</a
+    >
+  </div>
+</div>
