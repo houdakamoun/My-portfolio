@@ -1,1 +1,50 @@
 <app-hero></app-hero>
+
+<!-- Skills -->
+<section class="skills-section" id="skills">
+  <div class="skills-inner">
+    <p class="skills-label">Technologies & Tools</p>
+    <div class="skills-track">
+      <span class="chip" *ngFor="let skill of skills">{{ skill }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- Featured project -->
+<section class="featured-section page-section" *ngIf="featuredProject">
+  <h2 class="section-title">Featured Project</h2>
+  <p class="section-subtitle">My graduation project — career management platform</p>
+
+  <div class="featured-preview card-surface">
+    <div class="featured-image">
+      <img [src]="featuredProject.image" [alt]="featuredProject.title" />
+    </div>
+    <div class="featured-content">
+      <span class="featured-tag">Graduation 2026</span>
+      <h3>{{ featuredProject.title }}</h3>
+      <p>{{ featuredProject.description }}</p>
+      <div class="featured-tech">
+        <span class="chip" *ngFor="let t of featuredProject.tech.slice(0, 5)">{{ t }}</span>
+      </div>
+      <div class="featured-actions">
+        <a routerLink="/projects" class="btn btn-primary">View all projects</a>
+        <a
+          *ngIf="featuredProject.githubUrl"
+          [href]="featuredProject.githubUrl"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-outline"
+        >GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Let's work together</h2>
+    <p>Have a web project or looking for a motivated developer? Get in touch.</p>
+    <a routerLink="/contact" class="btn btn-primary">Start a conversation</a>
+  </div>
+</section>

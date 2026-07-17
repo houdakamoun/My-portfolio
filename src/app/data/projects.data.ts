@@ -3,10 +3,44 @@ import { Project } from '../models/project.model';
 export const PROJECTS: Project[] = [
   {
     id: 'pfe',
+    title: 'HHTecKUP',
+    subtitle:
+      'Design and development of a Career and Skills Management Platform',
+    description:
+      'HHTecKup is a career and competency management platform designed to help organizations manage employee skills, career development, training, and performance. It provides a secure and user-friendly environment that supports talent growth and strategic workforce management.',
+    tech: [
+      'TypeScript',
+      'HTML',
+      'CSS',
+      'Angular',
+      'Node.js',
+      'Express',
+      'Mysql',
+      'Devops',
+      'Docker',
+    ],
+    image: 'assets/img/HHteckup.jpg',
+    demoUrl: 'https://ton-domaine-ou-demo.netlify.app',
+    githubUrl: 'https://github.com/houdakamoun/Gestion-cariere',
+    year: 2026,
+    category: 'web',
+    featured: true,
+    highlights: [
+      'JWT authentication (admin / HR / employee)',
+      'CRUD for training programs',
+      'Assignments and filtered search',
+      'Secure REST API + validations',
+      'CI/CD (automatic deployment)',
+    ],
+  },
+
+  {
+    id: 'MyScool',
     title: 'My School',
     subtitle: 'Design and development of a private school management platform',
     description:
       'Web application for managing classes, courses, and assignments, with authentication and user roles.',
+
     tech: [
       'TypeScript',
       'HTML',
@@ -16,12 +50,15 @@ export const PROJECTS: Project[] = [
       'Express',
       'MONGODB',
     ],
+
     image: 'assets/img/pfe-cover.jpg',
-    demoUrl: 'https://ton-domaine-ou-demo.netlify.app',
+
     githubUrl: 'https://github.com/houdakamoun/Project_PFE',
+
     year: 2025,
     category: 'web',
-    featured: true,
+    featured: false,
+
     highlights: [
       'JWT authentication (admin / Teacher / Student / Parent )',
       'CRUD for classes & courses',
@@ -73,13 +110,14 @@ export const PROJECTS: Project[] = [
     category: 'web',
     featured: false,
     highlights: [
-      'JWT authentication ',
-      'CRUD for classes & courses',
-      'Assignments and filtered search',
+      'JWT authentication (admin / coach / player)',
+      'CRUD for teams & matches',
+      'Player stats and filtered search',
       'Secure REST API + validations',
-      'CI/CD (automatic deployment)',
+      'Responsive interface',
     ],
   },
+
   {
     id: 'HHFitness',
     title: 'HH Fitness',

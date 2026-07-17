@@ -1,37 +1,103 @@
-.contact-text {
-  max-width: 800px;
-  margin: 0 auto 2.5rem auto;
-  background: #ffffff;
-  padding: 2.5rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+:host {
+  display: block;
 }
 
-.contact-text h2 {
-  font-size: 1.8rem;
-  color: #0077b6;
-  margin-bottom: 1.5rem;
-  border-left: 4px solid #0077b6;
-  padding-left: 12px;
+.contact-page {
+  padding-bottom: 0;
 }
 
-.contact-text p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 0.8rem;
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.contact-text strong {
-  color: #222;
-}
-
-.contact-text a {
-  color: #0077b6;
+.contact-card {
+  padding: 1.75rem;
   text-decoration: none;
-  transition: color 0.3s ease;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+  cursor: pointer;
 }
 
-.contact-text a:hover {
-  color: #005f8a;
-  text-decoration: underline;
+.contact-card.static {
+  cursor: default;
+}
+
+.contact-card.static:hover {
+  transform: none;
+  box-shadow: var(--shadow-card);
+}
+
+.contact-card .icon-circle.linkedin {
+  background: rgba(10, 102, 194, 0.1);
+  color: #0a66c2;
+}
+
+.contact-card .icon-circle.github {
+  background: rgba(15, 23, 42, 0.08);
+  color: var(--dark);
+}
+
+.contact-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 0.25rem;
+}
+
+.contact-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+.card-link {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: var(--transition);
+}
+
+.contact-card:not(.static):hover .card-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-cta {
+  background: var(--dark);
+  padding: 3.5rem 2rem;
+  text-align: center;
+}
+
+.contact-cta p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.contact-cta .btn-primary {
+  box-shadow: 0 8px 24px rgba(0, 119, 182, 0.4);
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .card-link {
+    opacity: 1;
+    transform: none;
+  }
 }

@@ -1,89 +1,131 @@
-<section class="About">
-  <h1>About Me</h1>
-  <div class="cards-container">
-    <!-- Education Section -->
-    <div class="Education-text">
-      <h2>Education</h2>
+<section class="about-page">
+  <div class="page-hero-banner">
+    <h1 class="section-title">About Me</h1>
+    <p>Education, technical skills, and languages</p>
+  </div>
 
-      <div class="edu-item">
-        <h3>Bachelor’s Degree in Web Development</h3>
-        <p class="bashlor">
-          Keyce Informatique - College de Paris <br />
-          October 2025 – Present
-        </p>
+  <div class="cards-container page-section">
+    <div class="card-surface about-card">
+      <div class="card-header">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <h2>Education</h2>
       </div>
 
-      <div class="edu-item">
-        <h3>BTS – Higher Technician Diploma in Multimedia and Marketing</h3>
-        <p class="bts">
-          Sectoral Training Center for Telecommunications <br />
-          January 2023 – June 2025
-        </p>
+      <div class="timeline-item">
+        <h3>Bachelor's in Web Development</h3>
+        <p class="meta">Keyce Informatique — College de Paris</p>
+        <p class="date">October 2025 – Present</p>
       </div>
 
-      <div class="edu-item">
-        <h3>BTP – Professional Technician in Prepress and Graphic Design</h3>
-        <p class="btp">
-          Sectoral Training Center for Graphic Arts <br />
-          November 2020 – June 2022
-        </p>
+      <div class="timeline-item">
+        <h3>BTS Multimedia & Marketing</h3>
+        <p class="meta">Sector Training Center — Telecommunications</p>
+        <p class="date">January 2023 – June 2025</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>BTP Prepress & Graphic Design</h3>
+        <p class="meta">Sector Training Center — Graphic Arts</p>
+        <p class="date">November 2020 – June 2022</p>
       </div>
     </div>
 
-    <div class="Training-text">
-      <h2>Training</h2>
+    <div class="card-surface about-card">
+      <div class="card-header">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <h2>Additional Training</h2>
+      </div>
 
-      <div class="edu-item">
+      <div class="timeline-item">
         <h3>GOMYCODE</h3>
-        <p class="GOMYCODE">
-          Development Training — <br />
-          September 2023 – December 2023
-        </p>
+        <p class="meta">Development Training</p>
+        <p class="date">September – December 2023</p>
       </div>
 
-      <div class="edu-item">
+      <div class="timeline-item">
         <h3>Crococoder</h3>
-        <p class="Crococoder">
-          Fullstack JavaScript Training <br />
-          September 2024 – December 2024
-        </p>
+        <p class="meta">Fullstack JavaScript Training</p>
+        <p class="date">September – December 2024</p>
       </div>
     </div>
 
-    <!-- Skills Section -->
-    <div class="skill-text">
-      <h2>Technical Skills</h2>
+    <div class="card-surface about-card skills-card">
+      <div class="card-header">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h2>Technical Skills</h2>
+      </div>
 
-      <div class="skill-item">
+      <div class="skill-group">
         <h3>Web Development</h3>
-        <p class="devskill">
-          HTML, CSS, JavaScript, Angular, Node.js, express.js Python, PHP,
-          MySQL, MongoDB
-        </p>
+        <div class="skill-chips">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Angular</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Express</span>
+          <span class="chip">Python</span>
+          <span class="chip">PHP</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">MongoDB</span>
+        </div>
       </div>
 
-      <div class="skill-item">
+      <div class="skill-group">
         <h3>CMS & Tools</h3>
-        <p class="CMSskill">WordPress, ACF Pro</p>
+        <div class="skill-chips">
+          <span class="chip">WordPress</span>
+          <span class="chip">ACF Pro</span>
+        </div>
       </div>
 
-      <div class="skill-item">
+      <div class="skill-group">
         <h3>Design & Multimedia</h3>
-        <p class="mulskill">
-          Adobe Photoshop, Illustrator, Lightroom, Premiere Pro, Figma
-        </p>
+        <div class="skill-chips">
+          <span class="chip">Photoshop</span>
+          <span class="chip">Illustrator</span>
+          <span class="chip">Lightroom</span>
+          <span class="chip">Premiere Pro</span>
+          <span class="chip">Figma</span>
+        </div>
       </div>
     </div>
 
-    <!-- Languages Section -->
-    <div class="lang-text">
-      <h2>Languages</h2>
+    <div class="card-surface about-card">
+      <div class="card-header">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h2>Languages</h2>
+      </div>
 
-      <div class="lang-item">
-        <p><strong>Arabic:</strong> Native</p>
-        <p><strong>French:</strong> Fluent</p>
-        <p><strong>English:</strong> Fluent</p>
-        <p><strong>Spanish:</strong> Beginner</p>
+      <div class="lang-list">
+        <div class="lang-row">
+          <span>Arabic</span>
+          <div class="lang-bar"><div class="lang-fill" style="width: 100%"></div></div>
+          <span class="lang-level">Native</span>
+        </div>
+        <div class="lang-row">
+          <span>French</span>
+          <div class="lang-bar"><div class="lang-fill" style="width: 90%"></div></div>
+          <span class="lang-level">Fluent</span>
+        </div>
+        <div class="lang-row">
+          <span>English</span>
+          <div class="lang-bar"><div class="lang-fill" style="width: 85%"></div></div>
+          <span class="lang-level">Fluent</span>
+        </div>
+        <div class="lang-row">
+          <span>Spanish</span>
+          <div class="lang-bar"><div class="lang-fill" style="width: 35%"></div></div>
+          <span class="lang-level">Beginner</span>
+        </div>
       </div>
     </div>
   </div>

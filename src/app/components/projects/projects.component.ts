@@ -1,22 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { PROJECTS } from '../../data/projects.data';
 import { Project } from '../../models/project.model';
+
+type Category = 'all' | 'web' | 'mobile' | 'design' | 'other';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css'], // ou .scss selon ton choix
+  styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent {
   projects: Project[] = PROJECTS;
-  categories: Array<'all' | 'web' | 'mobile' | 'design' | 'other'> = [
-    'all',
-    'web',
-    'mobile',
-    'design',
-    'other',
-  ];
-  selectedCategory: 'all' | 'web' | 'mobile' | 'design' | 'other' = 'all';
+  categories: Category[] = ['all', 'web'];
+  selectedCategory: Category = 'all';
+
+  categoryLabels: Record<Category, string> = {
+    all: 'All',
+    web: 'Web',
+    mobile: 'Mobile',
+    design: 'Design',
+    other: 'Other',
+  };
+
+  selectedProject: Project | null = null;
 
   get featuredProject(): Project | undefined {
     return this.projects.find((p) => p.featured);
@@ -32,15 +38,24 @@ export class ProjectsComponent {
       );
   }
 
-  selectedProject: Project | null = null; // pour la modale "détails"
-  openDetails(p: Project) {
+  openDetails(p: Project): void {
     this.selectedProject = p;
-  }
-  closeDetails() {
-    this.selectedProject = null;
+    document.body.style.overflow = 'hidden';
   }
 
-  trackById(_i: number, p: Project) {
+  closeDetails(): void {
+    this.selectedProject = null;
+    document.body.style.overflow = '';
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    if (this.selectedProject) {
+      this.closeDetails();
+    }
+  }
+
+  trackById(_i: number, p: Project): string {
     return p.id;
   }
 }
